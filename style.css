@@ -1,0 +1,49 @@
+body {
+  background-color: #ddf;
+}
+.wrapper {
+  width: 300px;
+  margin: auto;
+  border: solid;
+  background-color: white;
+}
+.shape {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background: black;
+  margin: 25px;
+  padding: 0;
+  border: 20px solid #bbbbdd;
+}
+.Round {
+  -webkit-border-radius: 9999px;
+  -moz-border-radius: 9999px;
+  border-radius: 9999px;
+}
+#shape1 {
+  -webkit-border-radius: 9999px;
+  -moz-border-radius: 9999px;
+  border-radius: 9999px;
+}
+#shape1:hover {
+  background: #dfd;
+}
+#shape2 {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+#shape2:hover {
+  background: #f00;
+}
+#shape3 {
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+}
+#shape3:hover {
+  background: #fdd;
+}
+
+/*# sourceMappingURL=style.css.map */

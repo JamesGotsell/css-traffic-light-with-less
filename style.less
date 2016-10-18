@@ -1,0 +1,82 @@
+@lightRed: #fdd;
+@lightYellow: #f00;
+@lightGreen: #dfd;
+@lightBlue: #ddf;
+
+@defaultShapesWidth:200px;
+@darkBlue: @lightBlue - #555;
+
+@defaultThemeColor:@lightBlue;
+//@defaultThemeColor:spin(@lightBlue, 100);
+
+@borderSize:@defaultShapesWidth * 0.1;
+@borderColor:@defaultThemeColor - #222; 
+//@borderColor:darken(desaturate(@defaultThemeColor, 100%), 20%); 
+
+
+@defaultRadius:30px;
+
+body{
+  background-color: @lightBlue;
+ 
+}
+
+.wrapper {
+   width: 300px;
+   margin: auto;
+   border: solid;
+   background-color: white;
+}
+
+.shape{
+    display:inline-block;
+    width:@defaultShapesWidth;
+    height:200px;
+    background:black;
+    margin:25px;
+    padding: 0;
+    border:@borderSize solid @borderColor;
+}
+
+.RoundedShape(@radius:@defaultRadius) {
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius: @radius;
+}
+.Round{
+    .RoundedShape(9999px);
+}
+
+.RoundedSquare(@radius:@defaultRadius){
+    .RoundedShape(@radius);
+}
+
+#shape1 {
+  .Round;
+  &:hover{
+     background:@lightGreen;
+  }
+}
+
+#shape2 {
+  .RoundedSquare;
+  &:hover{
+      background:@lightYellow;
+  }
+}
+
+#shape3 {
+  .RoundedSquare(60px);
+  &:hover{
+      background:@lightRed;
+  }
+}
+
+.shape{
+   
+}
+
+
+
+
+
